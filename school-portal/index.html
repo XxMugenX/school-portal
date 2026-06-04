@@ -1,0 +1,684 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UNIBEN Faculty of Physical Sciences</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container navbar">
+        <a
+          class="brand"
+          href="index.html"
+          aria-label="UNIBEN Faculty of Physical Sciences home"
+        >
+          <span class="brand-mark brand-logo">
+            <img src="images/logo.jpeg" alt="" aria-hidden="true" />
+          </span>
+          <span class="brand-text">
+            <strong>Faculty of Physical Sciences</strong>
+            <span>University of Benin</span>
+          </span>
+        </a>
+
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+          aria-label="Toggle navigation"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <nav id="primary-nav" class="nav-links" aria-label="Primary navigation">
+          <a class="active" href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <details class="nav-dropdown">
+            <summary>Departmental</summary>
+            <div
+              class="nav-dropdown-menu"
+              role="menu"
+              aria-label="Departmental links"
+            >
+              <a href="statistics.html">Statistics</a>
+              <a href="geology.html">Geology</a>
+              <a href="chemistry.html">Chemistry</a>
+              <a href="physics.html">Physics</a>
+              <a href="mathematics.html">Mathematics</a>
+            </div>
+          </details>
+          <a href="contact.html">Contact Us</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main-content">
+      <section class="hero hero-slider">
+        <div class="container hero-grid">
+          <div class="slider-wrap reveal">
+            <div
+              class="slider"
+              id="heroSlider"
+              role="region"
+              aria-roledescription="carousel"
+              aria-label="Hero carousel"
+            >
+              <div class="slide active">
+                <img
+                  src="images/hero1.jpeg"
+                  alt="Students in a lecture room discussing data and analysis"
+                />
+                <div class="slide-caption">
+                  <span class="eyebrow"
+                    >Welcome to Faculty of Physical Sciences</span
+                  >
+                  <h2>Shaping analytical minds for a data-driven future</h2>
+                </div>
+              </div>
+
+              <div class="slide">
+                <img
+                  src="images/hero2.jpg"
+                  alt="Students collaborating around a laptop and notebook"
+                />
+                <div class="slide-caption">
+                  <span class="eyebrow">Collaborative learning</span>
+                  <h2>Practical projects and peer-led study</h2>
+                </div>
+              </div>
+
+              <div class="slide">
+                <img
+                  src="images/hero3.webp"
+                  alt="Campus building exterior and green surroundings"
+                />
+                <div class="slide-caption">
+                  <span class="eyebrow">Campus life</span>
+                  <h2>A supportive environment for learning and research</h2>
+                </div>
+              </div>
+
+              <button class="slider-prev" aria-label="Previous slide">‹</button>
+              <button class="slider-next" aria-label="Next slide">›</button>
+              <div class="slider-dots" id="heroDots"></div>
+            </div>
+            <div class="hero-cta-float hero-actions">
+              <a class="btn btn-primary" href="departmental.html"
+                >Explore Departments</a
+              >
+              <a class="btn btn-secondary" href="contact.html"
+                >Contact Faculty</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-light stats-quick">
+        <div class="container stats-ticker reveal">
+          <div class="ticker-item">
+            <span class="ticker-icon" aria-hidden="true">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M2 10l10-5 10 5-10 5-10-5Z" />
+                <path d="M6 12v4c0 1.7 2.7 3 6 3s6-1.3 6-3v-4" />
+              </svg>
+            </span>
+            <strong data-target="1200">0</strong>
+            <span>Graduates</span>
+          </div>
+          <div class="ticker-item">
+            <span class="ticker-icon" aria-hidden="true">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4Z" />
+                <path d="M4 20a8 8 0 0 1 16 0" />
+                <path d="M15 11h6" />
+                <path d="M18 8v6" />
+              </svg>
+            </span>
+            <strong data-target="45">0</strong>
+            <span>Active Lecturers</span>
+          </div>
+          <div class="ticker-item">
+            <span class="ticker-icon" aria-hidden="true">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M4 5h16v14H4z" />
+                <path d="M8 5v14" />
+                <path d="M12 8h4" />
+                <path d="M12 12h4" />
+              </svg>
+            </span>
+            <strong data-target="32">0</strong>
+            <span>Courses</span>
+          </div>
+          <div class="ticker-item">
+            <span class="ticker-icon" aria-hidden="true">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M9.5 20a6.5 6.5 0 1 1 5 0" />
+                <path d="M12 9v6" />
+                <path d="M9 12h6" />
+              </svg>
+            </span>
+            <strong data-target="98">0</strong>
+            <span>Research Projects</span>
+          </div>
+        </div>
+
+        <div class="container quick-access reveal">
+          <a class="quick-btn" href="departmental.html">Departments</a>
+          <a class="quick-btn" href="about.html">Admission Guide</a>
+          <a class="quick-btn" href="contact.html">Contact Faculty</a>
+          <a class="quick-btn" href="about.html">Faculty News</a>
+        </div>
+      </section>
+
+      <section class="dean-section" id="about">
+        <div class="container">
+          <div class="dean-inner">
+            <div class="dean-img-wrap reveal">
+              <div class="dean-img">
+                <img
+                  class="dean-portrait"
+                  src="images/dean.jpg"
+                  alt="Illustrated portrait for the Dean of the Faculty of Physical Sciences"
+                />
+              </div>
+              <div class="dean-badge">Dean, Faculty of Physical Sciences</div>
+            </div>
+            <div class="dean-text reveal">
+              <div class="section-tag">Dean's Message</div>
+              <h2 class="section-title">A Message from<br />Our Dean</h2>
+              <blockquote class="dean-quote">
+                "The Faculty of Physical Sciences stands at the intersection of
+                discovery and impact. We train scientists, statisticians,
+                geologists, mathematicians, chemists, physicists, and
+                optometrists who go on to shape policy, industry, and knowledge
+                across Nigeria and beyond."
+              </blockquote>
+              <p class="dean-copy">
+                Each Department offers courses leading to B.Sc.Honours Degree in
+                at least one discipline. In this prospectus, students will find
+                the combination of courses they are required to take and pass in
+                order to qualify for the award of a chosen degree. Therefore, it
+                is imperative for students to read carefully the prospectus and
+                seek clarification when they are in doubt.
+              </p>
+              <div class="dean-name">Prof JulianI Ibezimako Mbegbu</div>
+              <div class="dean-role">
+                Dean, Faculty of Physical Sciences · University of Benin
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section featured-news">
+        <div class="container">
+          <div class="section-intro reveal">
+            <span class="eyebrow">News & Events</span>
+            <h2>Latest faculty updates and opportunities</h2>
+          </div>
+
+          <div class="grid-3 reveal delay-1">
+            <article class="feature-card">
+              <img src="images/photo5.svg" alt="Research seminar" />
+              <h3>Research seminar on applied modelling</h3>
+              <p>
+                Join our seminar series where staff present recent applied work.
+              </p>
+            </article>
+            <article class="feature-card">
+              <img src="images/photo6.svg" alt="Student project showcase" />
+              <h3>Final-year project showcase</h3>
+              <p>
+                Students present projects demonstrating analytical and
+                computational skills.
+              </p>
+            </article>
+            <article class="feature-card">
+              <img src="images/photo7.svg" alt="Workshop" />
+              <h3>Data skills workshop</h3>
+              <p>
+                Hands-on sessions covering R, Python, and reproducible research.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container reveal">
+          <div class="section-intro centered">
+            <span class="eyebrow">Faculty strengths</span>
+            <h2>Teaching, research, and student support</h2>
+            <p>
+              The Faculty of Physical Sciences is built around strong academic
+              instruction, practical training, and a culture that supports
+              student growth from admission to graduation.
+            </p>
+          </div>
+
+          <div class="grid-3">
+            <article class="panel-tile">
+              <strong>Teaching</strong>
+              <span>
+                Courses are delivered to build clear understanding and strong
+                analytical thinking.
+              </span>
+            </article>
+            <article class="panel-tile">
+              <strong>Research</strong>
+              <span>
+                Staff and students work on projects that connect theory with
+                real scientific problems.
+              </span>
+            </article>
+            <article class="panel-tile">
+              <strong>Student support</strong>
+              <span>
+                Mentoring, supervision, and departmental guidance help students
+                stay focused and prepared.
+              </span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section student-leaders-section">
+        <div class="container">
+          <div class="section-intro reveal">
+            <span class="eyebrow">Student Leadership</span>
+            <h2>Faculty student executive positions</h2>
+            <p>
+              Replace each image with the current office holder and update the
+              short description where needed.
+            </p>
+          </div>
+
+          <div class="leaders-grid reveal delay-1">
+            <article class="leader-card">
+              <img src="images/governor.jpeg" alt="Faculty student governor" />
+              <p class="leader-name">
+                COMR. Obi-Ihemeje <br />
+                OnyekaChukwu Isaac
+              </p>
+              <h3>Governor</h3>
+            </article>
+            <article class="leader-card">
+              <img
+                class="leader-card"
+                src="images/dgovernor.jpeg"
+                alt="Faculty student deputy governor"
+              />
+              <p class="leader-name">
+                COMR. Onahi Adiya <br />
+                Orezijesu
+              </p>
+              <h3>Deputy Governor</h3>
+            </article>
+            <article class="leader-card">
+              <img src="images/DSport.jpeg" alt="Faculty student sports" />
+              <p class="leader-name">Comr. VIVIAN OSARETIN OKUONGHAE</p>
+              <h3>Director Socials</h3>
+            </article>
+            <article class="leader-card">
+              <img src="images/DW.jpeg" alt="Faculty student welfare" />
+              <p class="leader-name">Comr. OSAGIE MIRACLE</p>
+              <h3>Director of Welfare</h3>
+            </article>
+            <article class="leader-card">
+              <img
+                src="images/PRO.jpeg"
+                alt="Faculty student Public Relation Officer"
+              />
+              <p class="leader-name">Comr. MICHAEL ODIASE</p>
+              <h3>Director of Sports</h3>
+            </article>
+            <article class="leader-card">
+              <img src="images/DF.jpeg" alt="Faculty student finance" />
+              <p class="leader-name">Comr. OHENHEN ISOKEN GLORY</p>
+              <h3>Secretary General</h3>
+            </article>
+            <article class="leader-card">
+              <img src="images/DS.jpeg" alt="Faculty student socials" />
+              <p class="leader-name">Comr.s.oshiame oluwatimilehin</p>
+              <h3>Director of Finance</h3>
+            </article>
+            <article class="leader-card">
+              <img
+                src="images/d.jpeg"
+                alt="Faculty student Secretary General"
+              />
+              <p class="leader-name">Comr. AIYEVBEKPEN KELLY</p>
+              <h3>Public Relation Officer</h3>
+            </article>
+            <article class="leader-card">
+              <img
+                class="leader-card"
+                src="images/DT.jpeg"
+                alt="Faculty student Director of ICT"
+              />
+              <p class="leader-name">Comr. ONAIWU DESTINY OSAYI</p>
+              <h3>Director of ICT</h3>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHY CHOOSE US: PROFESSIONAL PREMIUM SECTION -->
+      <section class="section why-us-premium">
+        <div class="container">
+          <div class="why-us-intro reveal">
+            <span class="eyebrow">Why Faculty of Physical Sciences</span>
+            <h2>Graduate-ready science education and research</h2>
+            <p>
+              Our faculty combines rigorous academics with practical application
+              to prepare students for industry, research, and postgraduate
+              success.
+            </p>
+          </div>
+
+          <div class="why-us-grid reveal delay-1">
+            <article class="why-us-card">
+              <div class="why-us-icon">🎓</div>
+              <h3>World-Class Curriculum</h3>
+              <p>
+                Comprehensive programs across Statistics, Geology, Mathematics,
+                Chemistry, Physics, Optometry designed with input from industry
+                leaders and research pioneers.
+              </p>
+              <ul class="feature-list">
+                <li>Theory and applied practice</li>
+                <li>Modern laboratories and equipment</li>
+                <li>Research-led teaching</li>
+              </ul>
+            </article>
+
+            <article class="why-us-card">
+              <div class="why-us-icon">👨‍🔬</div>
+              <h3>Expert Faculty</h3>
+              <p>
+                Learn from accomplished researchers and practitioners with years
+                of experience and proven track records in their fields.
+              </p>
+              <ul class="feature-list">
+                <li>PhDs from leading institutions</li>
+                <li>Active researchers and consultants</li>
+                <li>Mentors committed to student success</li>
+              </ul>
+            </article>
+
+            <article class="why-us-card">
+              <div class="why-us-icon">🌍</div>
+              <h3>Career Readiness</h3>
+              <p>
+                Graduates join top organizations, pursue advanced degrees, or
+                lead research projects that impact policy and industry.
+              </p>
+              <ul class="feature-list">
+                <li>Industry partnerships and placements</li>
+                <li>Professional development workshops</li>
+                <li>Alumni network across sectors</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-intro reveal">
+            <span class="eyebrow">Department highlights</span>
+            <h2>A more lively look at the department.</h2>
+            <p>
+              These feature cards add visual energy and give visitors a quick
+              sense of the learning environment.
+            </p>
+          </div>
+
+          <div class="image-grid reveal delay-1">
+            <article class="image-card image-card-small">
+              <img
+                src="images/photo4.svg"
+                alt="Students collaborating around a laptop and notebook"
+              />
+              <div class="image-card-overlay">
+                <strong>Group work</strong>
+                <span
+                  >Collaborative problem solving and project discussion.</span
+                >
+              </div>
+            </article>
+            <article class="image-card image-card-small">
+              <img
+                src="images/photo5.svg"
+                alt="Presenter speaking to a classroom with charts on screen"
+              />
+              <div class="image-card-overlay">
+                <strong>Presentations</strong>
+                <span
+                  >Students build confidence through seminars and reviews.</span
+                >
+              </div>
+            </article>
+            <article class="image-card image-card-small">
+              <img
+                src="images/photo6.svg"
+                alt="Academic workspace with books, laptop, and notes"
+              />
+              <div class="image-card-overlay">
+                <strong>Study culture</strong>
+                <span
+                  >Focused workspaces encourage concentration and growth.</span
+                >
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section student-photo-section">
+        <div class="container">
+          <div class="section-intro reveal">
+            <span class="eyebrow">Student Life Gallery</span>
+            <h2>Showcase real student learning and outcomes</h2>
+            <p>
+              Replace each image with authentic student photos and edit the
+              short write-up below each card to match real activities.
+            </p>
+          </div>
+          <div class="student-photo-grid reveal delay-1">
+            <article class="student-photo-card">
+              <img src="images/photo4.svg" alt="Student in a lecture session" />
+              <h3>Student learning session</h3>
+              <p>
+                Add a brief description about classroom participation, practical
+                training, or faculty support.
+              </p>
+            </article>
+            <article class="student-photo-card">
+              <img
+                src="images/photo5.svg"
+                alt="Students in practical activity"
+              />
+              <h3>Practical engagement</h3>
+              <p>
+                Add a short note about laboratory work, project collaboration,
+                or seminar activities.
+              </p>
+            </article>
+            <article class="student-photo-card">
+              <img src="images/photo6.svg" alt="Student project presentation" />
+              <h3>Project presentation</h3>
+              <p>
+                Add a short write-up about final-year projects, innovation, or
+                research outcomes.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section faq-section">
+        <div class="container">
+          <div class="section-intro centered reveal">
+            <span class="eyebrow">FAQ</span>
+            <h2>Common questions from students and parents</h2>
+            <p>
+              Quick answers to the most common questions about programmes,
+              admissions, support, and getting in touch with the faculty.
+            </p>
+          </div>
+
+          <div class="faq-grid reveal delay-1">
+            <details class="faq-item" open>
+              <summary>
+                Which departments are in the Faculty of Physical Sciences?
+              </summary>
+              <p>
+                The faculty includes Statistics, Geology, Chemistry, Physics,
+                Mathematics, and Optometry.
+              </p>
+            </details>
+            <details class="faq-item">
+              <summary>How do I apply for admission?</summary>
+              <p>
+                Visit the University of Benin admission portal and follow the
+                current faculty and departmental admission instructions.
+              </p>
+            </details>
+            <details class="faq-item">
+              <summary>
+                Do students get practical laboratory experience?
+              </summary>
+              <p>
+                Yes. Our programmes include practical sessions, laboratory work,
+                projects, and supervised academic activities.
+              </p>
+            </details>
+            <details class="faq-item">
+              <summary>Who can I contact for more information?</summary>
+              <p>
+                You can use the Contact Us page or reach the faculty through the
+                email and phone details in the footer.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div class="footer-brand-block">
+          <div class="footer-brand-line">
+            <span class="brand-mark footer-mark brand-logo">
+              <img src="images/logo.jpeg" alt="" aria-hidden="true" />
+            </span>
+            <div>
+              <strong>Faculty of Physical Sciences</strong>
+              <p>University of Benin</p>
+            </div>
+          </div>
+          <p>
+            Making a difference and inspiring students so they develop strong
+            analytical skills and make impact in the world at large.
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h3>Navigation</h3>
+          <a href="index.html">Home</a>
+          <a href="about.html">About us</a>
+          <a href="departmental.html">Department</a>
+          <a href="contact.html">Contact us</a>
+        </div>
+
+        <div class="footer-column">
+          <h3>Services</h3>
+          <a href="statistics.html">Statistics</a>
+          <a href="geology.html">Geology</a>
+          <a href="chemistry.html">Chemistry</a>
+          <a href="physics.html">Physics</a>
+        </div>
+
+        <div class="footer-column">
+          <h3>Contact us</h3>
+          <a href="mailto:statistics@uniben.edu">statistics@uniben.edu</a>
+          <a href="tel:+2348000000000">+234 800 000 0000</a>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <p>
+          Copyright © 2026 Faculty of Physical Sciences UNIBEN. All rights
+          reserved.
+        </p>
+        <div class="footer-links footer-links-bottom">
+          <div class="social-icons">
+            <a
+              href="https://x.com"
+              aria-label="Follow on X"
+              title="Follow on X"
+              class="social-link"
+            >
+              <span class="visually-hidden">Follow on X</span>
+              <img src="icons/social.png" alt="" aria-hidden="true" />
+            </a>
+            <a
+              href="https://instagram.com"
+              aria-label="Follow on Instagram"
+              title="Follow on Instagram"
+              class="social-link"
+            >
+              <span class="visually-hidden">Follow on Instagram</span>
+              <img src="icons/instagram.png" alt="" aria-hidden="true" />
+            </a>
+            <a
+              href="https://linkedin.com"
+              aria-label="Follow on LinkedIn"
+              title="Follow on LinkedIn"
+              class="social-link"
+            >
+              <span class="visually-hidden">Follow on LinkedIn</span>
+              <img src="icons/social.png" alt="" aria-hidden="true" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="nav.js" defer></script>
+    <script src="script.js" defer></script>
+  </body>
+</html>

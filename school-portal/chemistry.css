@@ -1,0 +1,426 @@
+@import url("style.css");
+
+/* Chemistry-specific hero and programmes layout */
+.department-hero-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.35fr;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.department-hero .hero-copy h1 {
+  font-size: clamp(2rem, 3.6vw, 2.8rem);
+  margin-bottom: 0.6rem;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 18px;
+  display: block;
+}
+
+/* prominent hero sizing */
+.department-hero .hero-image {
+  display: block;
+}
+.department-hero .hero-image img {
+  height: clamp(220px, 42vh, 420px);
+}
+
+/* Stats ticker — white band with simple icons */
+.stats-ticker {
+  display: flex;
+  gap: 1rem;
+  background: #ffffff;
+  padding: 0.6rem 0.75rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(10, 30, 60, 0.06);
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+.stats-ticker .ticker-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 8.25rem;
+  text-align: center;
+}
+.ticker-icon {
+  font-size: 1.4rem;
+  display: block;
+  margin-bottom: 0.15rem;
+}
+.stats-ticker .ticker-item strong {
+  display: block;
+  font-size: 1.05rem;
+  color: #10345a;
+}
+.stats-ticker .ticker-item span:last-child {
+  font-size: 0.85rem;
+  color: #4b657a;
+}
+
+/* department logo card layout */
+.department-logo-section .department-logo-card {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #fff, #fbfcfe);
+  box-shadow: 0 8px 24px rgba(12, 40, 80, 0.04);
+}
+.department-logo-card img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.department-logo-copy h3 {
+  margin-top: 0;
+  margin-bottom: 0.35rem;
+}
+
+/* program card typography adjustments */
+.program-card h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.05rem;
+}
+.program-card p {
+  margin: 0;
+  color: #2f4b63;
+  font-size: 0.9rem;
+}
+
+/* staff & leaders grids spacing */
+.leaders-grid,
+.department-staff-grid {
+  gap: 1rem;
+}
+
+@media (max-width: 980px) {
+  .department-hero-grid {
+    grid-template-columns: 1fr;
+  }
+  .programs-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .department-logo-section .department-logo-card {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+  .department-logo-card img {
+    width: 100%;
+    height: 12rem;
+  }
+}
+
+.programs-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.program-card {
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(12, 40, 80, 0.06);
+}
+
+.program-card img {
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+  display: block;
+  transition: transform 220ms ease;
+}
+
+.program-card .card-overlay {
+  position: absolute;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 2;
+  color: #fff;
+}
+.program-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 40%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+  z-index: 1;
+}
+.program-card .card-overlay h3 {
+  margin: 0 0 0.35rem 0;
+  font-size: 1.05rem;
+}
+.program-card .card-overlay p {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+.program-card:hover img {
+  transform: scale(1.03);
+}
+
+/* About grid (three-column): logo, content, feature cards */
+.about-grid {
+  display: grid;
+  grid-template-columns: 220px 1fr 320px;
+  gap: 1rem;
+  align-items: start;
+  margin-top: 1.25rem;
+}
+.logo-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 14px;
+  padding: 1.25rem;
+  box-shadow: 0 10px 30px rgba(12, 40, 80, 0.04);
+}
+.logo-card img {
+  width: 160px;
+  height: 160px;
+  object-fit: contain;
+}
+.about-copy h2 {
+  margin-top: 0.25rem;
+  margin-bottom: 0.6rem;
+}
+.about-copy p {
+  color: #34566f;
+}
+.about-features {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.feature-card {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  background: linear-gradient(180deg, #fff, #fbfcfe);
+  padding: 0.8rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(12, 40, 80, 0.03);
+}
+.feature-icon {
+  font-size: 1.4rem;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 980px) {
+  .department-hero-grid {
+    grid-template-columns: 1fr;
+  }
+  .programs-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .programs-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* spacing moved from inline styles */
+.department-hero .stats-ticker {
+  margin-top: 1.25rem;
+}
+.meet-leaders-section .section-intro {
+  margin-top: 1.25rem;
+}
+
+/* override pass for the final Chemistry layout */
+.department-hero-panel {
+  background: linear-gradient(180deg, #f7fbff 0%, #ffffff 100%);
+  border-radius: 24px;
+  padding: 0;
+  box-shadow: 0 16px 40px rgba(12, 40, 80, 0.08);
+}
+
+.department-hero-panel .department-hero-grid {
+  align-items: stretch;
+  gap: 0;
+}
+
+.department-hero-panel .hero-copy,
+.department-hero-panel .hero-image {
+  min-height: 100%;
+}
+
+.department-hero-panel .hero-copy {
+  padding: 1rem 1.1rem;
+}
+
+.department-hero-panel .hero-image img {
+  height: 100%;
+  min-height: 240px;
+  max-height: 280px;
+}
+
+.department-hero .hero-copy h1 {
+  margin-bottom: 0.3rem;
+  line-height: 1.08;
+}
+
+.department-hero .hero-copy p {
+  margin-bottom: 0.85rem;
+}
+
+.department-hero .page-cta {
+  gap: 0.6rem;
+}
+
+.about-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+}
+
+.about-grid > * {
+  min-height: 100%;
+}
+
+.about-copy,
+.about-features,
+.logo-card {
+  height: 100%;
+}
+
+.about-copy,
+.about-features,
+.logo-card {
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(12, 40, 80, 0.04);
+}
+
+.logo-card img {
+  width: min(100%, 320px);
+  height: 320px;
+}
+
+@media (max-width: 980px) {
+  .department-hero-panel {
+    padding: 0;
+    border-radius: 20px;
+  }
+
+  .department-hero-panel .hero-image img {
+    min-height: 200px;
+    max-height: 240px;
+  }
+
+  .department-hero-panel .hero-copy {
+    padding: 1rem 1.1rem;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .logo-card img {
+    width: min(100%, 240px);
+    height: 240px;
+  }
+}
+
+/* Final Chemistry-specific sizing pass */
+.department-hero-panel {
+  padding: 1rem;
+}
+
+.department-hero-panel .hero-image img {
+  min-height: 220px;
+  max-height: 260px;
+}
+
+.department-hero .hero-copy h1 {
+  margin-bottom: 0.45rem;
+}
+
+.department-staff-grid .staff-mini-card img {
+  height: 13.5rem;
+  max-height: none;
+  object-fit: cover;
+}
+
+@media (max-width: 980px) {
+  .department-hero-panel .hero-image img {
+    min-height: 220px;
+    max-height: 260px;
+  }
+
+  .department-staff-grid .staff-mini-card img {
+    height: 12rem;
+  }
+}
+
+/* Make hero auto-height so all inner content is visible */
+.department-hero-panel {
+  height: auto;
+  padding: 1rem;
+  overflow: visible;
+}
+
+.department-hero-panel .department-hero-grid {
+  height: auto;
+  gap: 1rem;
+  align-items: center;
+}
+
+.department-hero-panel .hero-copy {
+  padding: 0.75rem 1rem !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.45rem;
+  height: auto;
+}
+
+.department-hero-panel .hero-copy h1 {
+  margin: 0 0 0.35rem 0;
+  line-height: 1.06;
+}
+
+.department-hero-panel .hero-copy p {
+  margin: 0 0 0.6rem 0;
+}
+
+.department-hero-panel .page-cta {
+  gap: 0.6rem;
+}
+
+/* Let the image size naturally, but cap its height so it doesn't grow too large */
+.department-hero-panel .hero-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+  max-height: 520px;
+  display: block;
+}
+
+@media (max-width: 980px) {
+  .department-hero-panel .hero-image img {
+    max-height: 380px;
+  }
+}
