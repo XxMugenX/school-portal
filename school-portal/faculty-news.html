@@ -1,0 +1,1072 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="News, announcements, research, events and student updates from the Faculty of Physical Sciences, University of Benin."
+    />
+    <title>Faculty News | Faculty of Physical Sciences, UNIBEN</title>
+
+    <!-- Keep this filename consistent with the shared stylesheet in your project. -->
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      /* Page-specific styles. The site-wide colours, type and shared components
+         are inherited from style.css. */
+      .news-page-hero {
+        padding-top: 2.2rem;
+        padding-bottom: 1.25rem;
+      }
+
+      .news-hero-card {
+        position: relative;
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: minmax(0, 1.45fr) minmax(220px, 0.55fr);
+        gap: 2rem;
+        align-items: center;
+        padding: clamp(1.5rem, 4vw, 3rem);
+        border-radius: var(--radius-lg);
+        background:
+          radial-gradient(circle at 88% 18%, rgba(214, 161, 58, 0.2), transparent 27%),
+          linear-gradient(135deg, rgba(18, 62, 99, 0.11), rgba(15, 123, 140, 0.08) 48%, rgba(255, 255, 255, 0.94));
+        border: 1px solid rgba(18, 62, 99, 0.09);
+        box-shadow: var(--shadow);
+      }
+
+      .news-hero-copy {
+        position: relative;
+        z-index: 1;
+      }
+
+      .news-hero-copy h1 {
+        max-width: 13ch;
+        margin: 1rem 0 0.8rem;
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: clamp(2.45rem, 5.4vw, 4.5rem);
+        line-height: 0.98;
+        letter-spacing: -0.035em;
+        color: var(--text);
+      }
+
+      .news-hero-copy p {
+        max-width: 48rem;
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.8;
+        font-size: 1rem;
+      }
+
+      .news-hero-aside {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        gap: 0.8rem;
+      }
+
+      .news-hero-note {
+        padding: 1.15rem 1.2rem;
+        border: 1px solid rgba(18, 62, 99, 0.1);
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.68);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+      }
+
+      .news-hero-note strong {
+        display: block;
+        color: var(--brand);
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: 1.6rem;
+        line-height: 1.1;
+      }
+
+      .news-hero-note span {
+        display: block;
+        margin-top: 0.35rem;
+        color: var(--muted);
+        font-size: 0.84rem;
+        line-height: 1.5;
+      }
+
+      .news-section {
+        padding-top: 1.4rem;
+      }
+
+      .news-section-heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        gap: 1.2rem;
+        margin-bottom: 1.35rem;
+      }
+
+      .news-section-heading .section-intro {
+        margin-bottom: 0;
+      }
+
+      .news-sortbar {
+        display: flex;
+        justify-content: flex-end;
+        margin: 1.2rem 0 1rem;
+      }
+
+      .news-sort-control {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.8rem;
+        padding: 0.55rem 0.75rem 0.55rem 1rem;
+        border: 1px solid rgba(18, 62, 99, 0.1);
+        border-radius: 14px;
+        background: rgba(255, 255, 255, 0.82);
+        color: var(--muted);
+        font-size: 0.82rem;
+        font-weight: 700;
+      }
+
+      .news-sort-control select {
+        min-width: 130px;
+        border: 0;
+        outline: 0;
+        background: transparent;
+        color: var(--brand);
+        font: inherit;
+        cursor: pointer;
+      }
+
+      .news-sort-control:focus-within {
+        border-color: rgba(15, 123, 140, 0.5);
+        box-shadow: 0 0 0 4px rgba(15, 123, 140, 0.08);
+      }
+
+      .news-results-line {
+        margin: 0 0 1rem;
+        color: var(--muted);
+        font-size: 0.88rem;
+      }
+
+      .news-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.15rem;
+        align-items: stretch;
+      }
+
+      .news-card-shell {
+        min-width: 0;
+      }
+
+      .news-card-shell.is-featured {
+        grid-column: span 2;
+      }
+
+      .news-card {
+        width: 100%;
+        height: 100%;
+        min-width: 0;
+        display: grid;
+        grid-template-rows: 190px 1fr;
+        padding: 0;
+        overflow: hidden;
+        text-align: left;
+        color: inherit;
+        cursor: pointer;
+        border: 1px solid rgba(18, 62, 99, 0.09);
+        border-radius: 22px;
+        background: rgba(255, 255, 255, 0.91);
+        box-shadow: 0 12px 30px rgba(16, 32, 51, 0.075);
+        transition:
+          transform 0.22s ease,
+          box-shadow 0.22s ease,
+          border-color 0.22s ease;
+      }
+
+      .news-card:hover,
+      .news-card:focus-visible {
+        transform: translateY(-4px);
+        border-color: rgba(15, 123, 140, 0.28);
+        box-shadow: 0 20px 42px rgba(16, 32, 51, 0.13);
+        outline: none;
+      }
+
+      .news-card:focus-visible {
+        outline: 3px solid rgba(15, 123, 140, 0.48);
+        outline-offset: 3px;
+      }
+
+      .news-card__media {
+        position: relative;
+        min-width: 0;
+        min-height: 0;
+        overflow: hidden;
+        background:
+          radial-gradient(circle at 80% 15%, rgba(214, 161, 58, 0.34), transparent 28%),
+          linear-gradient(135deg, #123e63, #0f7b8c);
+      }
+
+      .news-card__media img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.45s ease;
+      }
+
+      .news-card:hover .news-card__media img {
+        transform: scale(1.045);
+      }
+
+      .news-media-placeholder {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 1.1rem;
+        color: #fff;
+        background:
+          radial-gradient(circle at 85% 12%, rgba(214, 161, 58, 0.35), transparent 27%),
+          linear-gradient(135deg, rgba(18, 62, 99, 0.98), rgba(15, 123, 140, 0.93));
+      }
+
+      .news-media-placeholder[hidden] {
+        display: none;
+      }
+
+      .news-media-placeholder span {
+        width: fit-content;
+        padding: 0.4rem 0.65rem;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.1);
+        font-size: 0.66rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .news-media-placeholder strong {
+        max-width: 13ch;
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: clamp(1.25rem, 2.3vw, 1.9rem);
+        line-height: 1.08;
+      }
+
+      .news-card__content {
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1.15rem 1.2rem 1.2rem;
+      }
+
+      .news-card__topline {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .news-card__date {
+        color: #778599;
+        font-size: 0.74rem;
+        font-weight: 700;
+      }
+
+      .news-card__content h2 {
+        margin: 0 0 0.55rem;
+        color: var(--text);
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: 1.28rem;
+        line-height: 1.2;
+      }
+
+      .news-card__content p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.88rem;
+        line-height: 1.7;
+      }
+
+      .news-card__footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.8rem;
+        width: 100%;
+        margin-top: auto;
+        padding-top: 1.05rem;
+        color: var(--brand);
+        font-size: 0.82rem;
+        font-weight: 800;
+      }
+
+      .news-card__arrow {
+        display: grid;
+        place-items: center;
+        width: 2rem;
+        height: 2rem;
+        flex: 0 0 auto;
+        border-radius: 50%;
+        background: rgba(15, 123, 140, 0.09);
+        font-size: 1.1rem;
+        transition: transform 0.2s ease;
+      }
+
+      .news-card:hover .news-card__arrow {
+        transform: translateX(3px);
+      }
+
+      .news-card-shell.is-featured .news-card {
+        grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+        grid-template-rows: minmax(285px, 1fr);
+      }
+
+      .news-card-shell.is-featured .news-card__content {
+        padding: 1.55rem;
+      }
+
+      .news-card-shell.is-featured .news-card__content h2 {
+        font-size: clamp(1.45rem, 2.5vw, 1.9rem);
+      }
+
+      .news-card-shell.is-featured .news-card__content p {
+        font-size: 0.94rem;
+      }
+
+      .news-empty {
+        display: none;
+        padding: 3rem 1.5rem;
+        border: 1px dashed rgba(18, 62, 99, 0.2);
+        border-radius: 22px;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.62);
+      }
+
+      .news-empty.is-visible {
+        display: block;
+      }
+
+      .news-empty strong {
+        display: block;
+        margin-bottom: 0.4rem;
+        color: var(--brand);
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: 1.5rem;
+      }
+
+      .news-empty p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      /* Native dialog gives the article popup keyboard and focus behaviour. */
+      .news-dialog {
+        width: min(860px, calc(100% - 1.5rem));
+        max-width: 860px;
+        max-height: min(90vh, 900px);
+        padding: 0;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-radius: 26px;
+        background: #fff;
+        color: var(--text);
+        box-shadow: 0 30px 90px rgba(6, 23, 39, 0.35);
+      }
+
+      .news-dialog::backdrop {
+        background: rgba(7, 22, 36, 0.68);
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
+      }
+
+      .news-dialog__frame {
+        position: relative;
+        max-height: min(90vh, 900px);
+        overflow-y: auto;
+        overscroll-behavior: contain;
+      }
+
+      .news-dialog__close {
+        position: sticky;
+        top: 0.9rem;
+        z-index: 5;
+        float: right;
+        display: grid;
+        place-items: center;
+        width: 2.65rem;
+        height: 2.65rem;
+        margin: 0.9rem 0.9rem -3.55rem 0;
+        border: 1px solid rgba(255, 255, 255, 0.65);
+        border-radius: 50%;
+        color: var(--brand);
+        background: rgba(255, 255, 255, 0.94);
+        box-shadow: 0 8px 22px rgba(16, 32, 51, 0.18);
+        font-size: 1.5rem;
+        line-height: 1;
+        cursor: pointer;
+      }
+
+      .news-dialog__close:focus-visible {
+        outline: 3px solid var(--accent);
+        outline-offset: 2px;
+      }
+
+      .news-dialog__media {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.55rem;
+        background: #e9eef6;
+      }
+
+      .news-dialog__media:empty {
+        display: none;
+      }
+
+      .news-dialog__media img {
+        width: 100%;
+        max-height: 440px;
+        object-fit: contain;
+        background: #e9eef6;
+      }
+
+      .news-dialog__media.is-poster img {
+        max-height: 72vh;
+        object-fit: contain;
+      }
+
+      .news-dialog__body {
+        padding: clamp(1.25rem, 4vw, 2.5rem);
+      }
+
+      .news-dialog__meta {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.55rem 0.8rem;
+        margin-bottom: 0.9rem;
+      }
+
+      .news-dialog__date {
+        color: var(--muted);
+        font-size: 0.82rem;
+        font-weight: 700;
+      }
+
+      .news-dialog__body h2 {
+        margin: 0 0 0.85rem;
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: clamp(1.8rem, 4.5vw, 2.7rem);
+        line-height: 1.08;
+        letter-spacing: -0.02em;
+      }
+
+      .news-dialog__excerpt {
+        margin: 0 0 1.15rem;
+        color: var(--muted);
+        font-size: 1rem;
+        line-height: 1.75;
+      }
+
+      .news-dialog__copy {
+        color: #35475d;
+        font-size: 0.97rem;
+        line-height: 1.9;
+        white-space: pre-line;
+        overflow-wrap: anywhere;
+      }
+
+      .news-dialog__copy:empty {
+        display: none;
+      }
+
+      .news-dialog__caption {
+        margin: 0;
+        padding: 0.85rem 1.2rem;
+        color: var(--muted);
+        background: #f4f7fb;
+        font-size: 0.84rem;
+        line-height: 1.6;
+      }
+
+      @media (max-width: 980px) {
+        .news-hero-card {
+          grid-template-columns: minmax(0, 1.3fr) minmax(190px, 0.7fr);
+        }
+
+        .news-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .news-card-shell.is-featured {
+          grid-column: span 2;
+        }
+      }
+
+      @media (max-width: 720px) {
+        .news-page-hero {
+          padding-top: 1.3rem;
+        }
+
+        .news-hero-card {
+          grid-template-columns: 1fr;
+          gap: 1.1rem;
+          padding: 1.4rem;
+        }
+
+        .news-hero-copy h1 {
+          max-width: 12ch;
+          font-size: clamp(2.45rem, 12vw, 3.5rem);
+        }
+
+        .news-hero-aside {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .news-hero-note {
+          padding: 0.9rem;
+        }
+
+        .news-hero-note strong {
+          font-size: 1.35rem;
+        }
+
+        .news-section-heading {
+          display: block;
+        }
+
+        .news-grid {
+          grid-template-columns: 1fr;
+          gap: 1rem;
+        }
+
+        .news-card-shell.is-featured {
+          grid-column: auto;
+        }
+
+        .news-card-shell.is-featured .news-card {
+          grid-template-columns: 1fr;
+          grid-template-rows: 210px auto;
+        }
+
+        .news-card-shell.is-featured .news-card__content {
+          padding: 1.15rem 1.2rem 1.2rem;
+        }
+
+        .news-card-shell.is-featured .news-card__content h2 {
+          font-size: 1.4rem;
+        }
+
+        .news-dialog {
+          width: calc(100% - 0.7rem);
+          max-height: 94vh;
+          border-radius: 20px;
+        }
+
+        .news-dialog__frame {
+          max-height: 94vh;
+        }
+
+        .news-dialog__media img {
+          max-height: 300px;
+        }
+
+        .news-dialog__media.is-poster img {
+          max-height: 68vh;
+        }
+      }
+
+      @media (max-width: 390px) {
+        .news-hero-aside {
+          grid-template-columns: 1fr;
+        }
+
+        .news-card__content {
+          padding: 1rem;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .news-card,
+        .news-card__media img,
+        .news-card__arrow {
+          transition: none;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container navbar">
+        <a
+          class="brand"
+          href="index.html"
+          aria-label="UNIBEN Faculty of Physical Sciences home"
+        >
+          <span class="brand-mark brand-logo">
+            <img src="images/logo.jpeg" alt="" aria-hidden="true" />
+          </span>
+          <span class="brand-text">
+            <strong>Faculty of Physical Sciences</strong>
+            <span>University of Benin</span>
+          </span>
+        </a>
+
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+          aria-label="Toggle navigation"
+        >
+          <span></span><span></span><span></span>
+        </button>
+
+        <nav id="primary-nav" class="nav-links" aria-label="Primary navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <details class="nav-dropdown">
+            <summary>Departments</summary>
+            <div
+              class="nav-dropdown-menu"
+              role="menu"
+              aria-label="Departmental links"
+            >
+              <a href="statistics.html">Statistics</a>
+              <a href="geology.html">Geology</a>
+              <a href="chemistry.html">Chemistry</a>
+              <a href="physics.html">Physics</a>
+              <a href="mathematics.html">Mathematics</a>
+            </div>
+          </details>
+          <a class="active" href="faculty-news.html" aria-current="page">Faculty News</a>
+          <a href="library.html">Library</a>
+          <a href="contact.html">Contact Us</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="news-page-hero">
+        <div class="container news-hero-card reveal">
+          <div class="news-hero-copy">
+            <span class="eyebrow">News · Events · Announcements</span>
+            <h1>What's happening across our faculty.</h1>
+            <p>
+              Stay connected with the latest faculty announcements, academic
+              activities, research highlights, student achievements and events
+              from the University of Benin's Faculty of Physical Sciences.
+            </p>
+          </div>
+          <aside class="news-hero-aside" aria-label="News page information">
+            <div class="news-hero-note">
+              <strong>One faculty.</strong>
+              <span>Five departments, one community of discovery.</span>
+            </div>
+            <div class="news-hero-note">
+              <strong>Stay informed.</strong>
+              <span>Open any story to read the full announcement or view its poster.</span>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section news-section" aria-labelledby="news-heading">
+        <div class="container">
+          <div class="news-section-heading">
+            <div class="section-intro reveal">
+              <span class="eyebrow">Faculty newsroom</span>
+              <h2 id="news-heading">The latest from our faculty</h2>
+              <p>
+                Explore faculty updates and announcements. Select a card to
+                open its full details, including image-only notices and posters.
+              </p>
+            </div>
+          </div>
+
+          <div class="news-sortbar reveal">
+            <label class="news-sort-control" for="newsSort">
+              <span>Sort news</span>
+              <select id="newsSort" aria-label="Sort faculty news">
+                <option value="latest">Latest first</option>
+                <option value="oldest">Oldest first</option>
+                <option value="title">Title A–Z</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="news-results-line" aria-live="polite">
+            <span id="newsResultCount">Loading faculty news…</span>
+          </div>
+
+          <div class="news-grid" id="newsGrid" aria-label="Faculty news cards"></div>
+          <div class="news-empty" id="newsEmpty" role="status" aria-live="polite" hidden></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div class="footer-brand-block">
+          <div class="footer-brand-line">
+            <span class="brand-mark footer-mark brand-logo">
+              <img src="images/logo.jpeg" alt="" aria-hidden="true" />
+            </span>
+            <div>
+              <strong>Faculty of Physical Sciences</strong>
+              <p>University of Benin</p>
+            </div>
+          </div>
+          <p>
+            This platform was initiated under the leadership of the Progressive
+            Executives 2025/2026 to improve academic communication, digital
+            accessibility, and student engagement within the Faculty of
+            Physical Sciences. An initiative of the Progressive Executive
+            2025/2026.
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h3>Navigation</h3>
+          <a href="index.html">Home</a>
+          <a href="about.html">About us</a>
+          <a href="faculty-news.html">Faculty news</a>
+          <a href="library.html">Library</a>
+          <a href="contact.html">Contact us</a>
+        </div>
+
+        <div class="footer-column">
+          <h3>Departments</h3>
+          <a href="statistics.html">Statistics</a>
+          <a href="geology.html">Geology</a>
+          <a href="chemistry.html">Chemistry</a>
+          <a href="physics.html">Physics</a>
+          <a href="mathematics.html">Mathematics</a>
+        </div>
+
+        <div class="footer-column">
+          <h3>Contact us</h3>
+          <a href="mailto:fapssa.uniben26@gmail.com">fapssa.uniben26@gmail.com</a>
+          <a href="tel:+2349059278084">+234 905 927 8084</a>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <p>Copyright © 2026 Faculty of Physical Sciences UNIBEN. All rights reserved.</p>
+        <div class="footer-links footer-links-bottom">
+          <div class="social-icons">
+            <a
+              href="https://www.instagram.com/fapssa.uniben?igsh=YTcxcmVoaGE2a2Iy"
+              aria-label="Follow on Instagram"
+              title="Follow on Instagram"
+              class="social-link"
+            >
+              <img src="icons/instagram.png" alt="" aria-hidden="true" />
+            </a>
+            <a
+              href="https://whatsapp.com/channel/0029Vb6MhvH9mrGWA9GIQq42"
+              aria-label="Follow on WhatsApp"
+              title="Follow on WhatsApp"
+              class="social-link"
+            >
+              <img src="icons/social.png" alt="" aria-hidden="true" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- The same dialog handles long-form news and image-only poster announcements. -->
+    <dialog class="news-dialog" id="newsDialog" aria-labelledby="dialogTitle">
+      <div class="news-dialog__frame">
+        <button class="news-dialog__close" id="dialogClose" type="button" aria-label="Close news details">&times;</button>
+        <div class="news-dialog__media" id="dialogMedia"></div>
+        <div class="news-dialog__body">
+          <div class="news-dialog__meta">
+            <span class="news-dialog__date" id="dialogDate"></span>
+          </div>
+          <h2 id="dialogTitle"></h2>
+          <p class="news-dialog__excerpt" id="dialogExcerpt"></p>
+          <div class="news-dialog__copy" id="dialogCopy"></div>
+        </div>
+      </div>
+    </dialog>
+
+    <script src="nav.js" defer></script>
+    <script>
+      (() => {
+        const NEWS_JSON_PATH = "faculty-news.json";
+
+        const newsGrid = document.getElementById("newsGrid");
+        const newsSort = document.getElementById("newsSort");
+        const newsResultCount = document.getElementById("newsResultCount");
+        const newsEmpty = document.getElementById("newsEmpty");
+        const newsDialog = document.getElementById("newsDialog");
+        const dialogClose = document.getElementById("dialogClose");
+        const dialogMedia = document.getElementById("dialogMedia");
+        const dialogDate = document.getElementById("dialogDate");
+        const dialogTitle = document.getElementById("dialogTitle");
+        const dialogExcerpt = document.getElementById("dialogExcerpt");
+        const dialogCopy = document.getElementById("dialogCopy");
+
+        let newsItems = [];
+        let lastOpenedCard = null;
+
+        function formatDate(item) {
+          if (item.dateLabel) return item.dateLabel;
+          if (!item.date) return "";
+
+          const parsed = new Date(`${item.date}T00:00:00`);
+          if (Number.isNaN(parsed.getTime())) return item.date;
+
+          return new Intl.DateTimeFormat("en-GB", {
+            day: "numeric",
+            month: "long",
+            year: "numeric"
+          }).format(parsed);
+        }
+
+        function makeMediaPlaceholder(title, label) {
+          const placeholder = document.createElement("div");
+          placeholder.className = "news-media-placeholder";
+
+          const kicker = document.createElement("span");
+          kicker.textContent = label || "Faculty of Physical Sciences";
+
+          const heading = document.createElement("strong");
+          heading.textContent = title || "Faculty news";
+
+          placeholder.append(kicker, heading);
+          return placeholder;
+        }
+
+        function createCard(item) {
+          const shell = document.createElement("article");
+          shell.className = "news-card-shell";
+          if (item.featured) shell.classList.add("is-featured");
+
+          const button = document.createElement("button");
+          button.type = "button";
+          button.className = "news-card";
+          button.setAttribute("aria-label", `Open news: ${item.title || "Faculty update"}`);
+          button.addEventListener("click", () => openNews(item, button));
+
+          const media = document.createElement("div");
+          media.className = "news-card__media";
+          media.setAttribute("aria-hidden", "true");
+
+          const fallback = makeMediaPlaceholder(
+            item.imageOnly ? "Announcement poster" : item.title,
+            "Faculty of Physical Sciences"
+          );
+          media.appendChild(fallback);
+
+          const imagePaths = Array.isArray(item.images) ? item.images : [];
+          if (imagePaths.length > 0) {
+            const image = document.createElement("img");
+            image.src = imagePaths[0];
+            image.alt = "";
+            image.loading = "lazy";
+            image.addEventListener("load", () => {
+              fallback.hidden = true;
+            });
+            image.addEventListener("error", () => {
+              image.remove();
+              fallback.hidden = false;
+            });
+            media.appendChild(image);
+          }
+
+          const content = document.createElement("div");
+          content.className = "news-card__content";
+
+          const topline = document.createElement("div");
+          topline.className = "news-card__topline";
+
+          const date = document.createElement("span");
+          date.className = "news-card__date";
+          date.textContent = formatDate(item);
+          topline.appendChild(date);
+
+          const heading = document.createElement("h2");
+          heading.textContent = item.title || `Faculty announcement ${item.newsNumber || ""}`;
+
+          const excerpt = document.createElement("p");
+          excerpt.textContent = item.excerpt || (
+            item.imageOnly
+              ? "Open to view the announcement image."
+              : "Open this update to read the full details."
+          );
+
+          const footer = document.createElement("div");
+          footer.className = "news-card__footer";
+
+          const footerText = document.createElement("span");
+          footerText.textContent = item.imageOnly ? "View announcement" : "Read full update";
+
+          const arrow = document.createElement("span");
+          arrow.className = "news-card__arrow";
+          arrow.setAttribute("aria-hidden", "true");
+          arrow.textContent = "→";
+          footer.append(footerText, arrow);
+
+          content.append(topline, heading, excerpt, footer);
+          button.append(media, content);
+          shell.appendChild(button);
+          return shell;
+        }
+
+        function getSortedItems() {
+          const sort = newsSort.value;
+          const items = [...newsItems];
+
+          if (sort === "title") {
+            return items.sort((a, b) => (a.title || "").localeCompare(b.title || ""));
+          }
+
+          // The news number follows the image naming convention and provides
+          // a stable sequence even when a post has no publication date.
+          return items.sort((a, b) => {
+            const numberA = Number(a.newsNumber || 0);
+            const numberB = Number(b.newsNumber || 0);
+            return sort === "oldest" ? numberA - numberB : numberB - numberA;
+          });
+        }
+
+        function renderNews() {
+          const items = getSortedItems();
+          newsGrid.replaceChildren(...items.map(createCard));
+          newsResultCount.textContent = `${items.length} ${items.length === 1 ? "update" : "updates"}`;
+          newsEmpty.hidden = true;
+          newsEmpty.classList.remove("is-visible");
+          newsGrid.hidden = false;
+        }
+
+        function addDialogImage(src, alt) {
+          const image = document.createElement("img");
+          image.src = src;
+          image.alt = alt || "Faculty news image";
+          image.loading = "eager";
+          image.addEventListener("error", () => {
+            image.remove();
+            if (!dialogMedia.querySelector("img")) {
+              const fallback = makeMediaPlaceholder("Image unavailable", "Check the image path");
+              fallback.style.position = "relative";
+              fallback.style.minHeight = "220px";
+              dialogMedia.appendChild(fallback);
+            }
+          });
+          dialogMedia.appendChild(image);
+        }
+
+        function openNews(item, trigger) {
+          lastOpenedCard = trigger || document.activeElement;
+          dialogMedia.replaceChildren();
+          dialogMedia.classList.toggle("is-poster", Boolean(item.imageOnly));
+
+          const imagePaths = Array.isArray(item.images) ? item.images : [];
+          imagePaths.forEach((src) => addDialogImage(src, item.imageAlt));
+
+          if (imagePaths.length === 0) {
+            const fallback = makeMediaPlaceholder(item.title, "Faculty of Physical Sciences");
+            fallback.style.position = "relative";
+            fallback.style.minHeight = "220px";
+            dialogMedia.appendChild(fallback);
+          }
+
+          dialogDate.textContent = formatDate(item);
+          dialogTitle.textContent = item.title || "Faculty announcement";
+          dialogExcerpt.textContent = item.excerpt || (
+            item.imageOnly ? "This announcement is available as an image." : ""
+          );
+          dialogCopy.textContent = item.body || "";
+          dialogExcerpt.hidden = !dialogExcerpt.textContent;
+
+          if (typeof newsDialog.showModal === "function") {
+            newsDialog.showModal();
+          } else {
+            newsDialog.setAttribute("open", "");
+          }
+        }
+
+        function closeNews() {
+          if (typeof newsDialog.close === "function" && newsDialog.open) {
+            newsDialog.close();
+          } else {
+            newsDialog.removeAttribute("open");
+            if (lastOpenedCard) lastOpenedCard.focus();
+          }
+        }
+
+        async function loadNews() {
+          newsResultCount.textContent = "Loading faculty news…";
+          newsGrid.setAttribute("aria-busy", "true");
+
+          try {
+            const response = await fetch(NEWS_JSON_PATH, { cache: "no-cache" });
+            if (!response.ok) {
+              throw new Error(`The news file returned ${response.status} ${response.statusText}.`);
+            }
+
+            const data = await response.json();
+            const records = Array.isArray(data) ? data : data.newsItems;
+            if (!Array.isArray(records)) {
+              throw new Error('The JSON file must contain a "newsItems" array.');
+            }
+
+            newsItems = records.filter((item) => item && typeof item === "object");
+            if (newsItems.length === 0) {
+              throw new Error("No news entries were found in the JSON file.");
+            }
+
+            renderNews();
+          } catch (error) {
+            console.error("Unable to load faculty news:", error);
+            newsGrid.replaceChildren();
+            newsGrid.hidden = true;
+            newsResultCount.textContent = "Faculty news could not be loaded.";
+            newsEmpty.hidden = false;
+            newsEmpty.classList.add("is-visible");
+            newsEmpty.replaceChildren();
+
+            const heading = document.createElement("strong");
+            heading.textContent = "News are temporarily unavailable";
+            const message = document.createElement("p");
+            message.textContent = "Make sure faculty-news.json is in the same folder as this page and open the website through a local or hosted web server.";
+            newsEmpty.append(heading, message);
+          } finally {
+            newsGrid.removeAttribute("aria-busy");
+          }
+        }
+
+        newsSort.addEventListener("change", renderNews);
+        dialogClose.addEventListener("click", closeNews);
+
+        newsDialog.addEventListener("click", (event) => {
+          if (event.target === newsDialog) closeNews();
+        });
+
+        newsDialog.addEventListener("close", () => {
+          if (lastOpenedCard && document.contains(lastOpenedCard)) {
+            lastOpenedCard.focus();
+          }
+        });
+
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape" && newsDialog.hasAttribute("open")) {
+            closeNews();
+          }
+        });
+
+        loadNews();
+      })();
+    </script>
+  </body>
+</html>

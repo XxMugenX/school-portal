@@ -1,0 +1,446 @@
+{
+  "newsItems": [
+    {
+      "id": "news-1",
+      "newsNumber": 1,
+      "title": "Science Exhibition & Innovation Summit 2026",
+      "category": "Events",
+      "date": "2026-06-30",
+      "dateLabel": "30 June 2026",
+      "excerpt": "Big ideas. Real solutions. Limitless possibilities. Discover student projects and creative solutions from all five departments.",
+      "body": "Office of the Assistant Dean in collaboration with the Office of the Director of Science and Technology\n\nPresents the Science Exhibition & Innovation Summit 2026.\n\n🚀🔬 BIG IDEAS. REAL SOLUTIONS. LIMITLESS POSSIBILITIES.\n\nGet ready for the Science Exhibition & Innovation Summit 2026, where innovation meets opportunity and brilliant minds come together to shape the future.\n\n🌟 Theme: Creating Solutions Through Science\n📅 TUESDAY 30th June, 2026\n⏰ 9:00 AM Prompt\n📍 Physical Sciences 500LT, UNIBEN\n\nWitness groundbreaking projects, inspiring discoveries, and creative solutions from students across the Faculty of Physical Sciences.\n\nFive Departments, One Vision for Innovation!\n\nThe following departments will be showcasing exciting projects, groundbreaking ideas, and innovative solutions:\n🔹 Chemistry\n🔹 Geology\n🔹 Mathematics\n🔹 Physics\n🔹 Statistics\n\nDon't just imagine the future - come and experience it.",
+      "images": [
+        "images/faculty-news/news1.jpeg"
+      ],
+      "imageAlt": "Science Exhibition and Innovation Summit 2026 announcement",
+      "imageOnly": false,
+      "featured": true,
+      "placeholder": false
+    },
+    {
+      "id": "news-2",
+      "newsNumber": 2,
+      "title": "Courtesy Visit to the Edo State Commissioner of Health",
+      "category": "Announcements",
+      "date": "",
+      "dateLabel": " ",
+      "excerpt": "The Progressive Executives of FAPSSA paid a courtesy visit to the Honourable Commissioner of Health, Dr. Cyril Adams Oshiomhole.",
+      "body": "COURTESY VISIT TO THE HONOURABLE COMMISSIONER OF HEALTH, EDO STATE - DR. CYRIL ADAMS OSHIOMHOLE\nBY THE PROGRESSIVE EXECUTIVES OF FAPSSA*\n\nThe Executive Council of FAPSSA, led by The Progressive Governor, Comr. Obi-Ihemeje Onyeka, paid a courtesy visit to the Honourable Commissioner of Health, Edo State, Dr. Cyril Adams Oshiomhole.\n\nPresent during the visit were members of the Progressive Executive and other faculty stakeholders.\n\nDuring the meeting, the Governor, on behalf of the Executive Council and the entire students of the Faculty of Physical Sciences, appreciated the Honourable Commissioner for his continuous efforts towards improving the healthcare system within Edo State, including the renovation of Primary Healthcare Centres and the promotion of health awareness programs across different sectors.\n\nThe Executive Council also discussed important issues concerning youth development through the healthcare system, particularly in relation to Mental Health Awareness Month.",
+      "images": [
+        "images/faculty-news/news2.jpeg"
+      ],
+      "imageAlt": "FAPSSA Progressive Executives courtesy visit to the Edo State Commissioner of Health",
+      "imageOnly": false,
+      "featured": false,
+      "placeholder": false
+    },
+    {
+      "id": "news-3",
+      "newsNumber": 3,
+      "title": "Student Creative Experience 1.0",
+      "category": "Workshops",
+      "date": "2026-06-09",
+      "dateLabel": "9–12 June 2026",
+      "excerpt": "A free student development initiative exploring graphic design, smartphone photography and AI YouTube storytelling.",
+      "body": "🚀 FACULTY OF PHYSICAL SCIENCES STUDENTS, THIS IS FOR YOU!\n\nThe Office of the Secretary General, Faculty of Physical Sciences Association (FAPSSA), University of Benin proudly presents:\n\n🔥 STUDENT CREATIVE EXPERIENCE 1.0\nEmpowering Students Through Smartphone Creativity\n\n📅 Date: Tuesday, June 9th – Friday, June 12th\n🎟️ Participation Fee: FREE\n\nThis initiative is specially designed for FAPSSA students who are ready to explore creativity, innovation, and digital opportunities using just their smartphones.\n\n✨ What You Will Learn:\n🎨 Graphic Design — Flyers, posters, social media designs, and more.\n📸 Photography — Professional smartphone photography techniques.\n🎬 AI YouTube Storytelling — Faceless AI videos, scripts, thumbnails, voiceovers, and more.",
+      "images": [
+        "images/faculty-news/news3.jpeg"
+      ],
+      "imageAlt": "Student Creative Experience 1.0 announcement",
+      "imageOnly": false,
+      "featured": false,
+      "placeholder": false
+    },
+    {
+      "id": "news-4",
+      "newsNumber": 4,
+      "title": "First Fellowship of the Semester",
+      "category": "Events",
+      "date": "2026-05-29",
+      "dateLabel": "29 May 2026",
+      "excerpt": "The Physical Sciences’ Christian Fellowship invites students to its first fellowship of the semester, themed Access To The Father.",
+      "body": "🎊🎊GLORYYYYYYYYYY!!! 🎊🎊\n\nHallelujah! What a glorious moment it shall be in God’s presence! 🙌🔥\n\nThe Physical Sciences’ Christian Fellowship\nin conjunction with the\nOffice of the Governor\n\nJoyfully invites you to her First Fellowship of the Semester.\n\n✨ THEME: Access To The Father\n📖 “For through Him we both have access by one Spirit unto the Father.” — Ephesians 2:18\n\n🗓️ Date: Friday, 29th May, 2026\n⏰ Time: 1:30 PM\n📍 Venue: Physical Science 218LT\n\nThis is more than just a gathering; it is a divine moment of:\n🔥 Encounter\n🔥 Equipping\n🔥 Fellowship in Word and Spirit\n🔥 Spiritual lifting and transformation\n\nCome expectant, come hungry, and come ready to experience God in a fresh dimension. Your life will not remain the same!\n\nInvite your friends and course mates — you do not want to miss this for anything.\n\nStay blessed, and we look forward to fellowshipping with you! 🎉✨",
+      "images": [
+        "images/faculty-news/news4.jpeg"
+      ],
+      "imageAlt": "Physical Sciences’ Christian Fellowship first fellowship of the semester announcement",
+      "imageOnly": false,
+      "featured": false,
+      "placeholder": false
+    },
+    {
+      "id": "news-5",
+      "newsNumber": 5,
+      "title": "Happy World Environment Day",
+      "category": "Announcements",
+      "date": "",
+      "dateLabel": " ",
+      "excerpt": "FAPSSA marks World Environment Day and encourages everyone to reduce waste, reuse materials and recycle plastics.",
+      "body": "FACULTY OF PHYSICAL SCIENCES STUDENTS' ASSOCIATION, (FAPSSA)\n\n🌍 Happy World Environment Day! ♻️\n\nToday, we join the world in celebrating the beauty and importance of our environment. Every small action we take reducing waste, reusing materials, and recycling plastics, contributes to a cleaner, healthier, and more sustainable future for generations to come.\n\nAs we commemorate this year's World Environment Day, let us all embrace the responsibility of protecting our planet by making environmentally conscious choices every day.\n\nTogether, we can beat plastic pollution and create a greener world for all. 🌱💚\n\nHappy World Environment Day!",
+      "images": [
+        "images/faculty-news/news5.jpeg"
+      ],
+      "imageAlt": "FAPSSA World Environment Day message",
+      "imageOnly": false,
+      "featured": false,
+      "placeholder": false
+    },
+    {
+      "id": "news-6",
+      "newsNumber": 6,
+      "title": "FAPSSA Times – Volume 1",
+      "category": "Announcements",
+      "date": "",
+      "dateLabel": " ",
+      "excerpt": "The first edition of FAPSSA Times rounds up executive activities, student development, sports and preparations for FAPSSA Week 2026.",
+      "body": "FROM THE OFFICE OF THE PUBLIC RELATIONS OFFICER\n\n📰 FAPSSA TIMES – Vol. 1\n\nStay informed with the latest happenings in FAPSSA! From the Executive Council's visit to the Edo State Health Commissioner, fellowship activities, student development initiatives, and sports achievements, to preparations for FAPSSA Week 2026, this edition highlights the progress, impact, and vibrant spirit of our Faculty community.\n\nTogether, we continue to build a stronger, more informed, and united FAPSSA. 💚✨",
+      "images": [
+        "images/faculty-news/news6.jpeg"
+      ],
+      "imageAlt": "FAPSSA Times Volume 1 newsletter cover",
+      "imageOnly": false,
+      "featured": false,
+      "placeholder": false
+    },
+    {
+      "id": "news-7",
+      "newsNumber": 7,
+      "title": "FAPSSA Week 2026",
+      "category": "Events",
+      "date": "2026-06-29",
+      "dateLabel": "29 June – 3 July 2026",
+      "excerpt": "FAPSSA Week 2026 brings five days of academic, scientific, sporting, health and social activities under the theme Ignite, Inspire & Impact.",
+      "body": "🌟FAPSSA WEEK 2026 IS HERE!🔥\n\nThe wait is finally over FAPSSAn’s!!!!!!!!💚\n\nThe Office of the Deputy Governor proudly present FAPSSA Week 2026 themed:\n\n🧬 IGNITE, INSPIRE & IMPACT\n\n📅 ORDER OF ACTIVITIES\n\n📢 Day 1 – GENERAL ASSEMBLY & ACADEMIC SYMPOSIUM\n📍 29th June\n\n🧬 Day 2 – Science Exhibition And Educational Outreach\n📍 30th June\n\n⚽️🏟️ Day 3 – NOVELTY MATCH & JERSEY DAY\n📍 1st July\n\n🩺⚕️ Day 4 – HEALTH DAY\n📍 2nd July\n\n🍽️💃🏽 Day 5 – Social Day\n📍 3rd July\n\nMark your calendars and get ready to experience IGNITE, INSPIRE AND IMPACT WEEK like never before!!",
+      "images": [
+        "images/faculty-news/news7.jpeg"
+      ],
+      "imageAlt": "FAPSSA Week 2026 schedule and activities announcement",
+      "imageOnly": false,
+      "featured": false,
+      "placeholder": false
+    },
+    {
+      "id": "news-8",
+      "newsNumber": 8,
+      "title": "FAPSSA Health Day",
+      "category": "Events",
+      "date": "2026-07-02",
+      "dateLabel": "2 July 2026",
+      "excerpt": "The Office of the Director of Welfare invites the faculty community to a day focused on health awareness, preventive care and healthy living.",
+      "body": "FROM THE OFFICE OF THE DIRECTOR OF WELFARE\n\n🏥💙 FAPSSA Health Day Is Here! 💙🏥\n\nYour health is your greatest asset, and this Health Day is an opportunity to prioritize your well-being. Join us as we promote health awareness, preventive care, healthy living, and the importance of regular medical check-ups.\n\nWhether you're a student, health enthusiast, or simply looking to learn more about maintaining a healthier lifestyle, this event promises valuable insights and engaging activities designed to improve your overall wellness.\n\nDATE: July 2nd 2026\nVENUE: Geology field\n\nLet's come together to create a healthier and stronger FAPSSA community.\n\nStay healthy. Stay informed. Stay empowered.",
+      "images": [
+        "images/faculty-news/news8.jpeg"
+      ],
+      "imageAlt": "FAPSSA Health Day announcement",
+      "imageOnly": false,
+      "featured": false,
+      "placeholder": false
+    },
+    {
+      "id": "news-9",
+      "newsNumber": 9,
+      "title": "FAPSSA Most Popular Contest 2026 – Winner",
+      "category": "Announcements",
+      "date": "",
+      "dateLabel": " ",
+      "excerpt": "FAPSSA congratulates Amasowomwan Promise of Statistics, 400 Level, on winning the 2026 Most Popular Contest with 2,165 votes.",
+      "body": "🏆 FROM THE OFFICE OF THE PUBLIC RELATIONS OFFICER\n\nFAPSSA MOST POPULAR CONTEST 2026\n\nOFFICIAL CONGRATULATORY MESSAGE\n\nThe Faculty of Physical Sciences Students' Association (FAPSSA) heartily congratulates Amasowomwan Promise of the Department of Statistics (400 Level) on emerging as the Winner of the FAPSSA Most Popular Contest 2026.\n\nAfter an exciting and highly competitive voting process, Amasowomwan Promise secured a remarkable 2,165 votes, earning the prestigious title of FAPSSA Most Popular 2026.\n\nYour victory is a reflection of the tremendous support, admiration, and confidence reposed in you by the students of the Faculty of Physical Sciences.\n\nWe also extend our appreciation to all the finalists and every student who participated by voting and making this contest a success.\n\nOnce again, congratulations to Amasowomwan Promise, our FAPSSA Most Popular 2026. We wish you continued success and excellence in all your future endeavors.\n\nCongratulations! 🎉",
+      "images": [
+        "images/faculty-news/news9.jpeg"
+      ],
+      "imageAlt": "FAPSSA Most Popular Contest 2026 congratulatory announcement",
+      "imageOnly": false,
+      "featured": false,
+      "placeholder": false
+    },
+    {
+      "id": "news-10",
+      "newsNumber": 10,
+      "title": "Faculty of Physical Sciences – 1st International Conference",
+      "category": "Events",
+      "date": "2026-10-07",
+      "dateLabel": "7 October 2026",
+      "excerpt": "Students are invited to the Faculty of Physical Sciences’ first international conference at Akin Deko Auditorium, UNIBEN.",
+      "body": "📢 FACULTY OF PHYSICAL SCIENCES, UNIVERSITY OF BENIN\n\n1st INTERNATIONAL CONFERENCE\n\nInvitation for all Students\n\nYou are warmly invited to be part of this landmark academic event.\nCome, connect, share knowledge and contribute to advancing the frontiers of science and data analytics for sustainable development.\n\n📅 Date: Wednesday, 7th October, 2026\n⏰ Time: 10:00 a.m.\n📍 Venue: Akin Deko Auditorium, University of Benin.\n\nWe look forward to your valued presence and active participation.",
+      "images": [
+        "images/faculty-news/news10.jpeg"
+      ],
+      "imageAlt": "Faculty of Physical Sciences first international conference invitation",
+      "imageOnly": false,
+      "featured": false,
+      "placeholder": false
+    },
+    {
+      "id": "news-11",
+      "newsNumber": 11,
+      "title": "SoB Mobile App Is Live on the Play Store",
+      "category": "Announcements",
+      "date": "",
+      "dateLabel": " ",
+      "excerpt": "The SoB mobile app is now available on the Android Play Store. Download it and join the community.",
+      "body": "🚀 SoB Mobile App is LIVE on the Play Store!\n\nThe SoB app is officially available on Android. 🎉\n\nDownload now and join the community of intellectually curious people. 🧠🔥\n\nWelcome to SoB. Think. Connect. Share.",
+      "images": [
+        "images/faculty-news/news11.jpeg"
+      ],
+      "imageAlt": "SoB mobile app launch announcement",
+      "imageOnly": false,
+      "featured": false,
+      "placeholder": false
+    },
+    {
+      "id": "news-12",
+      "newsNumber": 12,
+      "title": "Faculty Announcement",
+      "category": "Posters",
+      "date": "",
+      "dateLabel": " ",
+      "excerpt": "Open to view the announcement image.",
+      "body": "",
+      "images": [
+        "images/faculty-news/news12.jpeg"
+      ],
+      "imageAlt": "Faculty news announcement image 12",
+      "imageOnly": true,
+      "featured": false,
+      "placeholder": false
+    },
+    {
+      "id": "news-13",
+      "newsNumber": 13,
+      "title": "Faculty Announcement",
+      "category": "Posters",
+      "date": "",
+      "dateLabel": " ",
+      "excerpt": "Open to view the announcement image.",
+      "body": "",
+      "images": [
+        "images/faculty-news/news13.jpeg"
+      ],
+      "imageAlt": "Faculty news announcement image 13",
+      "imageOnly": true,
+      "featured": false,
+      "placeholder": false
+    },
+    {
+      "id": "news-14",
+      "newsNumber": 14,
+      "title": "Faculty Announcement",
+      "category": "Posters",
+      "date": "",
+      "dateLabel": " ",
+      "excerpt": "Open to view the announcement image.",
+      "body": "",
+      "images": [
+        "images/faculty-news/news14.jpeg"
+      ],
+      "imageAlt": "Faculty news announcement image 14",
+      "imageOnly": true,
+      "featured": false,
+      "placeholder": false
+    },
+    {
+      "id": "news-15",
+      "newsNumber": 15,
+      "title": "Faculty Announcement",
+      "category": "Posters",
+      "date": "",
+      "dateLabel": " ",
+      "excerpt": "Open to view the announcement image.",
+      "body": "",
+      "images": [
+        "images/faculty-news/news15.jpeg"
+      ],
+      "imageAlt": "Faculty news announcement image 15",
+      "imageOnly": true,
+      "featured": false,
+      "placeholder": false
+    },
+    {
+      "id": "news-16",
+      "newsNumber": 16,
+      "title": "Faculty Announcement",
+      "category": "Posters",
+      "date": "",
+      "dateLabel": " ",
+      "excerpt": "Open to view the announcement image.",
+      "body": "",
+      "images": [
+        "images/faculty-news/news16.jpeg"
+      ],
+      "imageAlt": "Faculty news announcement image 16",
+      "imageOnly": true,
+      "featured": false,
+      "placeholder": false
+    },
+    {
+      "id": "news-17",
+      "newsNumber": 17,
+      "title": "Faculty Announcement",
+      "category": "Posters",
+      "date": "",
+      "dateLabel": " ",
+      "excerpt": "Open to view the announcement image.",
+      "body": "",
+      "images": [
+        "images/faculty-news/news17.jpeg"
+      ],
+      "imageAlt": "Faculty news announcement image 17",
+      "imageOnly": true,
+      "featured": false,
+      "placeholder": false
+    },
+    {
+      "id": "news-18",
+      "newsNumber": 18,
+      "title": "Faculty Announcement",
+      "category": "Posters",
+      "date": "",
+      "dateLabel": " ",
+      "excerpt": "Open to view the announcement image.",
+      "body": "",
+      "images": [
+        "images/faculty-news/news18.jpeg"
+      ],
+      "imageAlt": "Faculty news announcement image 18",
+      "imageOnly": true,
+      "featured": false,
+      "placeholder": false
+    },
+    {
+      "id": "news-19",
+      "newsNumber": 19,
+      "title": "Faculty Announcement",
+      "category": "Posters",
+      "date": "",
+      "dateLabel": " ",
+      "excerpt": "Open to view the announcement image.",
+      "body": "",
+      "images": [
+        "images/faculty-news/news19.jpeg"
+      ],
+      "imageAlt": "Faculty news announcement image 19",
+      "imageOnly": true,
+      "featured": false,
+      "placeholder": false
+    },
+    {
+      "id": "news-20",
+      "newsNumber": 20,
+      "title": "Faculty Announcement",
+      "category": "Posters",
+      "date": "",
+      "dateLabel": " ",
+      "excerpt": "Open to view the announcement image.",
+      "body": "",
+      "images": [
+        "images/faculty-news/news20.jpeg"
+      ],
+      "imageAlt": "Faculty news announcement image 20",
+      "imageOnly": true,
+      "featured": false,
+      "placeholder": false
+    },
+    {
+      "id": "news-21",
+      "newsNumber": 21,
+      "title": "Faculty Announcement",
+      "category": "Posters",
+      "date": "",
+      "dateLabel": " ",
+      "excerpt": "Open to view the announcement image.",
+      "body": "",
+      "images": [
+        "images/faculty-news/news21.jpeg"
+      ],
+      "imageAlt": "Faculty news announcement image 21",
+      "imageOnly": true,
+      "featured": false,
+      "placeholder": false
+    },
+    {
+      "id": "news-22",
+      "newsNumber": 22,
+      "title": "Faculty Announcement",
+      "category": "Posters",
+      "date": "",
+      "dateLabel": " ",
+      "excerpt": "Open to view the announcement image.",
+      "body": "",
+      "images": [
+        "images/faculty-news/news22.jpeg"
+      ],
+      "imageAlt": "Faculty news announcement image 22",
+      "imageOnly": true,
+      "featured": false,
+      "placeholder": false
+    },
+    {
+      "id": "news-23",
+      "newsNumber": 23,
+      "title": "Faculty Announcement",
+      "category": "Posters",
+      "date": "",
+      "dateLabel": " ",
+      "excerpt": "Open to view the announcement image.",
+      "body": "",
+      "images": [
+        "images/faculty-news/news23.jpeg"
+      ],
+      "imageAlt": "Faculty news announcement image 23",
+      "imageOnly": true,
+      "featured": false,
+      "placeholder": false
+    },
+    {
+      "id": "news-24",
+      "newsNumber": 24,
+      "title": "Faculty Announcement",
+      "category": "Posters",
+      "date": "",
+      "dateLabel": " ",
+      "excerpt": "Open to view the announcement image.",
+      "body": "",
+      "images": [
+        "images/faculty-news/news24.jpeg"
+      ],
+      "imageAlt": "Faculty news announcement image 24",
+      "imageOnly": true,
+      "featured": false,
+      "placeholder": false
+    },
+    {
+      "id": "news-25",
+      "newsNumber": 25,
+      "title": "Faculty Announcement",
+      "category": "Posters",
+      "date": "",
+      "dateLabel": " ",
+      "excerpt": "Open to view the announcement image.",
+      "body": "",
+      "images": [
+        "images/faculty-news/news25.jpeg"
+      ],
+      "imageAlt": "Faculty news announcement image 25",
+      "imageOnly": true,
+      "featured": false,
+      "placeholder": false
+    },
+    {
+      "id": "news-26",
+      "newsNumber": 26,
+      "title": "FAPSSA Times – Volume 2",
+      "category": "Announcements",
+      "date": "",
+      "dateLabel": " ",
+      "excerpt": "FAPSSA Times Volume 2 covers FAPSSA Week 2026, Health Day outreach, the Science Exhibition, Industrializing Africa 2026 and FYB Week activities.",
+      "body": "📰 FAPSSA TIMES | Vol. 2\n\nStay informed with the latest updates from the Faculty of Physical Sciences Students' Association. This edition highlights the kickoff of FAPSSA Week 2026, Health Day outreach, the Science Exhibition and Innovation Summit, Industrializing Africa 2026, FYB Week activities, and other key events shaping our faculty.\n\nKnowledge. Progress. Impact. Stay connected with FAPSSA.",
+      "images": [
+        "images/faculty-news/news26.jpeg"
+      ],
+      "imageAlt": "FAPSSA Times Volume 2 newsletter cover",
+      "imageOnly": false,
+      "featured": false,
+      "placeholder": false
+    }
+  ]
+}
